@@ -1,0 +1,75 @@
+import FreeCAD
+from PySide import QtCore, QtGui, QtUiTools
+
+# Autor:			18Turbo
+# Fecha:		17-08-2022
+# Versión:		0.0.2 ALFA
+#	
+# Funcionalidad:	Muestra datos detallados del objeto seleccionado
+#
+# Notas de versiones:
+# v.0.0.2:        Mejora presentación de los datos
+# v.0.0.1:		Información del Bounding Box, área, volumen, ubicación, longitud.
+#
+#
+
+rutaMacro = FreeCAD.ParamGet("User parameter:BaseApp/Preferences/Macro")     
+rutaUI = rutaMacro.GetString("MacroPath","") + "/infoPlus/infoPlus.ui"
+rutaUI = rutaUI.replace("\\","/")
+
+
+class infoPlus:
+
+    def __init__(self):
+        self.form = FreeCADGui.PySideUic.loadUi(rutaUI)
+        self.form.setWindowTitle(objetoSeleccion.Label)
+        self.form.tab.addTab(self.form.basicos,'Ubicación')
+        self.form.tab.addTab(self.form.boundingbox,'BoundBox') 
+        tipo = seleccion[0].TypeId
+        if (tipo.find('Sketcher::')>-1) or (tipo.find('PartDesign')>-1) or (tipo.find('Part::')>-1):
+            self.form.tab.setEnabled(True)
+            self.ubicacion()
+            self.boundbox()
+            if (tipo.find('PartDesign::Plane')>-1):
+                self.longitud()
+
+    def boundbox(self):
+        self.form.boundingbox.setEnabled(True)  
+         
+        self.form.minx.setText(str(objetoSeleccion.Shape.BoundBox.XMin))
+        self.form.maxx.setText(str(objetoSeleccion.Shape.BoundBox.XMax))
+        self.form.lonx.setText(str(objetoSeleccion.Shape.BoundBox.XLength))
+        self.form.miny.setText(str(objetoSeleccion.Shape.BoundBox.YMin))
+        self.form.maxy.setText(str(objetoSeleccion.Shape.BoundBox.YMax))
+        self.form.lony.setText(str(objetoSeleccion.Shape.BoundBox.YLength))
+        self.form.minz.setText(str(objetoSeleccion.Shape.BoundBox.ZMin))
+        self.form.maxz.setText(str(objetoSeleccion.Shape.BoundBox.ZMax))
+        self.form.lonz.setText(str(objetoSeleccion.Shape.BoundBox.ZLength))
+        self.form.centrox.setText(str(objetoSeleccion.Shape.BoundBox.Center[0]))
+        self.form.centroy.setText(str(objetoSeleccion.Shape.BoundBox.Center[1]))
+        self.form.centroz.setText(str(objetoSeleccion.Shape.BoundBox.Center[2]))
+        self.form.diabb.setText(str(objetoSeleccion.Shape.BoundBox.DiagonalLength))
+
+    def ubicacion(self):
+        self.form.basicos.setEnabled(True)
+        self.form.area.setText(str(objetoSeleccion.Shape.Area))
+        self.form.volumen.setText(str(objetoSeleccion.Shape.Volume))
+        ubicacionX = objetoSeleccion.Placement.Base[0]
+        ubicacionY = objetoSeleccion.Placement.Base[1]
+        ubicacionZ = objetoSeleccion.Placement.Base[2]
+        self.form.ubx.setText("(" + str(round(ubicacionX, 2)) + ") " + str(ubicacionX))
+        self.form.uby.setText("(" + str(round(ubicacionY, 2)) + ") " + str(ubicacionY))
+        self.form.ubz.setText("(" + str(round(ubicacionZ, 2)) + ") " + str(ubicacionZ))
+        self.form.lonBase.setText(str(objetoSeleccion.Placement.Base.Length))
+
+    def longitud(self):
+        self.form.basicos.setEnabled(True)
+        self.form.longitud.setText(str(objetoSeleccion.Length))
+
+
+seleccion=Gui.Selection.getSelection()
+if (len(seleccion) == 1):
+    objetoSeleccion = App.ActiveDocument.getObject(seleccion[0].Name)
+    infoPlus().form.show()
+else:
+    App.Console.PrintWarning("Debe seleccionar un solo objeto adecuado")
