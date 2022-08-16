@@ -2,7 +2,7 @@ import FreeCAD
 from PySide import QtCore, QtGui, QtUiTools
 
 # Autor:			18Turbo
-# Fecha:		17-08-2022
+# Fecha:		16-08-2022
 # Versión:		0.0.3 ALFA
 #	
 # Funcionalidad:	Muestra datos detallados del objeto seleccionado
