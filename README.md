@@ -1,6 +1,10 @@
 # infoPlusFreeCAD
 Muestra información adicional sobre objetos creados en FreeCAD
 
+### ¿Por qué es una versión ALFA?
+
+Esta versión es ALFA, porque solo ciertos objetos pueden marcarse para mostrar la información, y la información que se muestra es "algo básica".
+
 ### Instalación detallada
 
 1. Copia todo el contenido de este script (macro) a tu ordenador, en la carpeta "macros" de tu FreeCAD.
