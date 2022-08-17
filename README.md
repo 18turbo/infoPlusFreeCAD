@@ -1,9 +1,15 @@
 # infoPlusFreeCAD
 Muestra información adicional sobre objetos creados en FreeCAD
 
-### ¿Por qué es una versión ALFA?
+### ¿Por qué las versiones anteriores eran versiones ALFA?
 
-Esta versión es ALFA, porque solo ciertos objetos pueden marcarse para mostrar la información, y la información que se muestra es "algo básica".
+Hasta la versión 0.0.3 son versiones ALFA, porque solo ciertos objetos pueden marcarse para mostrar la información, y la información que se muestra es "algo básica".
+
+### ¿Por qué la versión 0.0.4 ya es BETA?
+
+Desde la versión 0.0.4, se han incluido muchísimos datos de control de los objetos (de ubicación, de cuadro limitador, de datos, etc.) y se han ampliado los objetos de los que pueden mostrarse información detallada.
+
+Es cierto que faltan aún muchísimos datos por mostrar (que aparecerán en versiones posteriores a la 0.0.4), pero ya es una versión muy interesante por los datos que arroja.
 
 ### Instalación detallada
 
@@ -13,7 +19,7 @@ Esta versión es ALFA, porque solo ciertos objetos pueden marcarse para mostrar 
 3. En la ventana que aparece, pincha en el botón de la derecha "Crear"
 4. Pon un nombre para la macro, por ejemplo: "Info Plus", y pincha en Aceptar.
 5. Aparecerá una pestaña de FreeCAD en blanco.
-6. Copia el contenido del fichero **InfoPlus_0.0.3.FCMacro** y peǵalo a la ventana en blanco. Para hacerlo, abre el fichero con cualquier editor de texto, selecciona TODO, cópialo con CTRL-C y pégalo en el documento en blanco con CTRL-V
+6. Copia el contenido del fichero **InfoPlus_0.0.4.FCMacro** y peǵalo a la ventana en blanco. Para hacerlo, abre el fichero con cualquier editor de texto, selecciona TODO, cópialo con CTRL-C y pégalo en el documento en blanco con CTRL-V
 7. Pincha en **Archivo --> Guardar**
 8. Cierra la pestaña.
 9. Vuelve a ir  al menú superior **Macro --> Macros...**
