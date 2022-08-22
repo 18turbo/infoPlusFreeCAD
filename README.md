@@ -19,7 +19,7 @@ Es cierto que faltan aún muchísimos datos por mostrar (que aparecerán en vers
 3. En la ventana que aparece, pincha en el botón de la derecha "Crear"
 4. Pon un nombre para la macro, por ejemplo: "Info Plus", y pincha en Aceptar.
 5. Aparecerá una pestaña de FreeCAD en blanco.
-6. Copia el contenido del fichero **InfoPlus_0.0.4.FCMacro** y peǵalo a la ventana en blanco. Para hacerlo, abre el fichero con cualquier editor de texto, selecciona TODO, cópialo con CTRL-C y pégalo en el documento en blanco con CTRL-V
+6. Copia el contenido del fichero **InfoPlus_0.0.5.FCMacro** y peǵalo a la ventana en blanco. Para hacerlo, abre el fichero con cualquier editor de texto, selecciona TODO, cópialo con CTRL-C y pégalo en el documento en blanco con CTRL-V
 7. Pincha en **Archivo --> Guardar**
 8. Cierra la pestaña.
 9. Vuelve a ir  al menú superior **Macro --> Macros...**
