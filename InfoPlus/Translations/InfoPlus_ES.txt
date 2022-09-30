@@ -60,4 +60,8 @@
 "Arista",
 "Visible",
 "Oculto",
-"Debe seleccionar un solo objeto adecuado"
+"Debe seleccionar un solo objeto adecuado",
+"Coordenadas de los vértices:",
+"Vértices de las Aristas:",
+"Longitudes de las Aristas:",
+"Masas de las Aristas:"
