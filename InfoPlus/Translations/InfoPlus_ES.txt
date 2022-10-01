@@ -70,4 +70,5 @@
         "Coordenadas de los vértices:",
         "Vértices de las Aristas:",
         "Longitudes de las Aristas:",
-        "Masas de las Aristas:"
+        "Masas de las Aristas:",
+        "¡Es un sólido!"
