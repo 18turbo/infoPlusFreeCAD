@@ -1,5 +1,7 @@
-# infoPlusFreeCAD
+# InfoPlus para FreeCAD
 Muestra información adicional sobre objetos creados en FreeCAD
+
+(English): The script (macro) displays additional information about objects created in FreeCAD
 
 ### ¿Por qué las versiones anteriores eran versiones ALFA?
 
