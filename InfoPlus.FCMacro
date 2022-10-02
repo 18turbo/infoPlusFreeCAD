@@ -30,6 +30,7 @@ __Files__ = 'Infoplus.svg,InfoPlus/ui/InfoPlus.ui'
 # v.0.1.0:        Adaptación al Addon Manager
 #                Traducción al inglés
 #                Deshabilitación la información que no se muestra
+#                   Vídeo de las mejoras en Youtube
 # v.0.0.6:        Mejora visual de la interfaz
 # v.0.0.5:        Mejora de la presentación de algunos datos
 #                Implementación de la masa
