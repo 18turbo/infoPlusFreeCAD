@@ -39,3 +39,7 @@ Es cierto que faltan aún muchísimos datos por mostrar (que aparecerán en vers
 
 
 https://github.com/18turbo/infoPlusFreeCAD/wiki/Informaci%C3%B3n-de-los-Datos-Mostrados
+
+## Agradecimientos
+
+A Rocco Vicedomini: por la traducción al inglés e italiano
